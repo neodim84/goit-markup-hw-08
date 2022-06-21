@@ -1,0 +1,46 @@
+.feature__list {
+    display: flex;
+}
+
+.feature__list .feature__card:not(last-child) {
+    margin-right: 30px;
+}
+
+.feature__cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-bgc);
+    border-radius: 4px;
+}
+
+.feature__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.feature__card {
+    text-align: left;
+}
+
+.feature__title {
+    margin: 30px 0 10px 0;
+
+    color: var(--secondary-text-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.feature__text {
+    max-width: 270px;
+}
+
+.feature__sect {
+    padding-bottom: 0;
+}

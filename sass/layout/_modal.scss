@@ -1,0 +1,231 @@
+.modal__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: 1;
+    opacity: 1;
+    transform: scale(1);
+
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--timing-dur) var(--timing-func), transform var(--timing-dur) var(--timing-func);
+
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.5);
+        pointer-events: none;
+    }
+}
+
+.modal__cont {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+
+    background: var(--primary-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%);
+}
+
+.close__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: box-shadow var(--timing-dur) var(--timing-func);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }    
+}
+
+.close__icon {
+    transition: fill var(--timing-dur) var(--timing-func);
+
+    .close__btn:hover &,
+    .close__btn:focus & {
+        fill: var(--accent-color);
+    }    
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__title {
+    margin-bottom: 12px;
+
+    color: var(--secondary-text-color);
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.modal__field {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal__label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+
+.modal__input {
+    margin-top: 4px;
+    padding: 11px 12px 11px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border var(--timing-dur) var(--timing-func);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+        outline: none;
+    }
+}
+
+.modal__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+
+    transition: fill var(--timing-dur) var(--timing-func);
+
+    .modal__input:hover + &,
+    .modal__input:focus + & {
+        fill: var(--accent-color);
+    }    
+}
+
+.modal__svg {
+    width: 100%;
+    height: 100%;
+}
+
+.modal__comment {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal__area {
+    margin-top: 4px;
+    padding: 12px 16px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    font-size: 12px;
+
+    transition: border var(--timing-dur) var(--timing-func);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+        outline: none;
+    }
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+
+        transition: font-size var(--timing-dur) var(--timing-func);
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+        font-size: 14px;
+    }
+}
+
+.modal__checkbox {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 3px;
+
+    transition: background-color var(--timing-dur) var(--timing-func), border var(--timing-dur) var(--timing-func);
+
+    .checkbox:focus + & {
+        border: 2px solid var(--accent-color);
+    }
+
+    .checkbox:checked + & {
+        border: none;
+        background-color: var(--accent-color);
+    }
+}
+
+.checkbox__svg {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+
+    transition: fill var(--timing-dur) var(--timing-func);
+
+    .checkbox:checked + .checkbox__icon & {
+        fill: var(--primary-color);
+    }
+}
+
+.modal__link {
+    padding-left: 4px;
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.modal__btn {
+    @extend %btn;
+
+    padding: 10px 55px;
+    margin: 0 auto;
+
+    transition: box-shadow var(--timing-dur) var(--timing-func);
+    
+    &:hover,
+    &:focus {
+        background-color: var(--hover-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+

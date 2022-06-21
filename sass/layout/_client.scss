@@ -1,0 +1,42 @@
+.client__list {
+    display: flex;
+}
+
+.client__list .client__item:not(last-child) {
+    margin-right: 30px;
+}
+
+.client__item {
+    width: 170px;
+    height: 92px;
+}
+
+.client__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    outline: 1px solid var(--sprite-color);
+    border-radius: 4px;
+
+    transition: outline var(--timing-dur) var(--timing-func);
+
+    &:hover,
+    &:focus {
+        outline: 1px solid var(--accent-color);
+}
+}
+
+.client__icon {
+    width: 106px;
+    height: 60px;
+    fill: var(--sprite-color);
+
+    transition: fill var(--timing-dur) var(--timing-func);
+
+    .client__link:hover &,
+    .client__link:focus & {
+        fill: var(--accent-color);
+}
+}
