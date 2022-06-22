@@ -1,5 +1,10 @@
 .logo-header {
-    margin-right: 93px;
+    @media screen and (min-width: 768px) {
+        margin-right: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
 }
 
 .logo-end {
@@ -9,20 +14,89 @@
 .page-nav {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.menu__btn {
+    margin: 0 0 0 auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+    & .close-menu__icon {
+        display: none;
+    }
+    & .menu__icon {
+        transition: fill var(--timing-dur) var(--timing-func);
+    }
+
+    &.is-open .close-menu__icon {
+        display: block;
+
+        transition: fill var(--timing-dur) var(--timing-func);
+    }
+
+    &.is-open .menu__icon {
+        display: none;
+    }
+
+    &:hover .menu__icon,
+    &:focus .menu__icon {
+        fill: var(--accent-color);
+    }
+
+    &:hover .close-menu__icon,
+    &:focus .close-menu__icon {
+        fill: var(--accent-color);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+        
+    }
+}
+
+.mobile__cont {
+    @media screen and (max-width: 767px) {
+        display: none;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        padding: 48px 40px;
+    
+        background-color: var(--primary-color);
+    }
+
+    &.is-open {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
 }
 
 .nav__list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .nav__link {
-    display: block;
-    padding: 32px 0;
-
     color: var(--secondary-text-color);
 
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
 
     transition: color var(--timing-dur) var(--timing-func);
@@ -31,26 +105,36 @@
     &:focus {
         color: var(--accent-color);
     }
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 0;
+
+        font-size: 14px;
+        line-height: 1.14;
+    }
 }
 
 .active__link {
-    position: relative;
     color: var(--accent-color);
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--accent-color);
-    }
+    @media screen and (min-width: 768px) {
+        position: relative;
 
-    &:hover::after,
-    &:focus::after {
-        animation: scaleline var(--timing-dur) var(--timing-func);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--accent-color);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            animation: scaleline var(--timing-dur) var(--timing-func);
+        }
     }
 }
 
@@ -64,35 +148,50 @@
 }
 
 .nav__list .nav__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-right: 50px;
+    }
 }
 
 .cont__list {
-    display: flex;
-    margin-left: auto;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 300px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        padding: 21px 0;
+    }
 }
 
 .cont__icon {
-    margin-right: 10px;
-    fill: var(--primary-text-color);
+    display: none;
 
-    transition: fill var(--timing-dur) var(--timing-func);
+    @media screen and (min-width: 768px) {
+        display: block;
+        margin-right: 10px;
+        fill: var(--primary-text-color);
 
-    .cont__link:hover &,
-    .cont__link:focus & {
-        fill: currentColor;
+        transition: fill var(--timing-dur) var(--timing-func);
+
+        .cont__link:hover &,
+        .cont__link:focus & {
+            fill: currentColor;
+        }
     }
 }
 
 .cont__link {
-    display: flex;
-    padding: 32px 0;
-    align-items: center;
-
     color: var(--primary-text-color);
 
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
 
     transition: color var(--timing-dur) var(--timing-func);
@@ -101,14 +200,74 @@
     &:focus {
         color: var(--accent-color);
     }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        line-height: 1.14;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 32px 0;
+    }
+}
+
+.tel__link {
+    @media screen and (max-width: 767px) {
+        color: var(--accent-color);
+
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.18;
+    }
 }
 
 .cont__list .cont__item:not(last-child) {
-    margin-right: 50px;
+    @media screen and (max-width: 767px) {
+        margin-top: 32px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-right: 50px;
+    }
+}
+
+.social-mob__list {
+    display: flex;
+    margin-top: 64px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.social-mob__list .social-mob__item:not(last-child) {
+    margin-right: 10px;
+    border-right: 1px solid var(--secondary-text-color-color);
+}
+
+// .social-mob__list .social-mob__item:not(first-child) {
+//     padding-left: 10px;
+// }
+
+.social-mob__link {
+    color: var(--accent-color);
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
 }
 
 .header__cont {
-    display: flex;
+    @media screen and (max-width: 767px) {
+        position: relative;   
+    }
+
+    // @media screen and (min-width: 768px) {
+    //     display: flex;
+    // }
 }
 
 .page-header {
