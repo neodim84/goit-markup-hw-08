@@ -11,7 +11,7 @@
     <!--Шапка страницы-->
 
     <header class="page-header">
-      <div class="container header__cont">
+      <div class="container">
         <!-- Навигация по странице -->
 
         <nav class="page-nav">
@@ -53,7 +53,7 @@
 
             <ul class="cont__list">
               <li class="cont__item">
-                <a href="mailto:info@devstudio.com" class="cont__link">
+                <a href="mailto:info@devstudio.com" class="cont__link mail__link">
                   <svg width="16" height="12" class="cont__icon">
                     <use href="./img/sprite.svg#envelope"></use>
                   </svg>
@@ -69,6 +69,9 @@
                 </a>
               </li>
             </ul>
+
+            <!-- Соцсети шапки -->
+
             <ul class="social-mob__list">
               <li class="social-mob__item">
                 <a href="/" class="social-mob__link">Instagram</a>
@@ -107,8 +110,8 @@
       <section class="feature__sect section">
         <div class="container">
           <h2 class="visually-hidden">Особенности работы</h2>
-          <ul class="feature__list">
-            <li class="feature__card">
+          <ul class="feature__list grid">
+            <li class="feature__card grid__item">
               <div class="feature__cont">
                 <svg class="feature__icon">
                   <use href="./img/sprite.svg#antenna"></use>
@@ -120,7 +123,7 @@
                 формированию позиции.
               </p>
             </li>
-            <li class="feature__card">
+            <li class="feature__card grid__item">
               <div class="feature__cont">
                 <svg class="feature__icon">
                   <use href="./img/sprite.svg#clock"></use>
@@ -132,7 +135,7 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="feature__card">
+            <li class="feature__card grid__item">
               <div class="feature__cont">
                 <svg class="feature__icon">
                   <use href="./img/sprite.svg#diagram"></use>
@@ -144,7 +147,7 @@
                 степени обуславливает.
               </p>
             </li>
-            <li class="feature__card">
+            <li class="feature__card grid__item">
               <div class="feature__cont">
                 <svg class="feature__icon">
                   <use href="./img/sprite.svg#astronaut"></use>
@@ -211,8 +214,8 @@
       <section class="team__section section">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
-          <ul class="team__list">
-            <li class="team__card">
+          <ul class="team__list grid">
+            <li class="team__card grid__item">
               <img
                 src="./images/photo1.jpg"
                 alt="Игорь Демьяненко"
@@ -255,7 +258,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__card">
+            <li class="team__card grid__item">
               <img src="./images/photo2.jpg" alt="Ольга Репина" width="270" />
               <div class="team__text">
                 <h3 class="team__name">Ольга Репина</h3>
@@ -294,7 +297,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__card">
+            <li class="team__card grid__item">
               <img
                 src="./images/photo3.jpg"
                 alt="Николай Тарасов"
@@ -337,7 +340,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__card">
+            <li class="team__card grid__item">
               <img src="./images/photo4.jpg" alt="Михаил Ермаков" width="270" />
               <div class="team__text">
                 <h3 class="team__name">Михаил Ермаков</h3>
@@ -386,43 +389,43 @@
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <div>
-            <ul class="client__list">
-              <li class="client__item">
+            <ul class="client__list grid">
+              <li class="client__item grid__item">
                 <a href="/" class="client__link">
                   <svg class="client__icon">
                     <use href="./img/sprite.svg#client1"></use>
                   </svg>
                 </a>
               </li>
-              <li class="client__item">
+              <li class="client__item grid__item">
                 <a href="/" class="client__link">
                   <svg class="client__icon">
                     <use href="./img/sprite.svg#client2"></use>
                   </svg>
                 </a>
               </li>
-              <li class="client__item">
+              <li class="client__item grid__item">
                 <a href="/" class="client__link">
                   <svg class="client__icon">
                     <use href="./img/sprite.svg#client3"></use>
                   </svg>
                 </a>
               </li>
-              <li class="client__item">
+              <li class="client__item grid__item">
                 <a href="/" class="client__link">
                   <svg class="client__icon">
                     <use href="./img/sprite.svg#client4"></use>
                   </svg>
                 </a>
               </li>
-              <li class="client__item">
+              <li class="client__item grid__item">
                 <a href="/" class="client__link">
                   <svg class="client__icon">
                     <use href="./img/sprite.svg#client5"></use>
                   </svg>
                 </a>
               </li>
-              <li class="client__item">
+              <li class="client__item grid__item">
                 <a href="/" class="client__link">
                   <svg class="client__icon">
                     <use href="./img/sprite.svg#client6"></use>
@@ -444,24 +447,28 @@
             Web
             <span class="logo-end-foot">Studio</span>
           </a>
+
+          <!-- Адрес -->
+
           <address>
             <ul class="cont-foot__list">
               <li class="cont-foot__item contact-first">
                 г. Киев, пр-т Леси Украинки, 26
               </li>
               <li class="cont-foot__item">
-                <a href="mailto:info@devstudio.com" class="cont-foot__link"
-                  >info@devstudio.com</a
-                >
+                <a href="mailto:info@devstudio.com" class="cont-foot__link">
+                  info@devstudio.com</a>
               </li>
               <li class="cont-foot__item">
-                <a href="tel:+380961111111" class="cont-foot__link"
-                  >+38 096 111 11 11</a
-                >
+                <a href="tel:+380961111111" class="cont-foot__link">
+                  +38 096 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
+
+        <!-- Соцсети подвала -->
+
         <div class="social-foot__cont">
           <p class="social-foot__text">присоединяйтесь</p>
           <div>
@@ -497,6 +504,9 @@
             </ul>
           </div>
         </div>
+
+        <!-- Подписка -->
+
         <div class="mailing__cont">
           <p class="social-foot__text">подпишитесь на рассылку</p>
           <form name="mailing-form" class="mailing__form">
@@ -562,8 +572,8 @@
             <textarea
               name="comment"
               placeholder="Введите текст"
-              class="modal__area"
-            ></textarea>
+              class="modal__area">
+            </textarea>
           </label>
           <label class="modal__checkbox">
             <input
@@ -571,10 +581,11 @@
               name="agreement"
               class="checkbox visually-hidden"
             />
-            <span class="checkbox__icon"
-              ><svg class="checkbox__svg">
-                <use href="./img/sprite.svg#check"></use></svg
-            ></span>
+            <span class="checkbox__icon">
+              <svg class="checkbox__svg">
+                <use href="./img/sprite.svg#check"></use>
+              </svg>
+            </span>
             <span>Соглашаюсь с рассылкой и принимаю</span>
             <a href="/" class="modal__link">Условия договора</a>
           </label>

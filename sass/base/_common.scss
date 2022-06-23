@@ -8,16 +8,27 @@ body {
   }
 
 .section {
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
     padding: 94px 0;
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: var(--indent);
 
   color: var(--secondary-text-color);
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

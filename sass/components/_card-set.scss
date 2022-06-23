@@ -1,10 +1,10 @@
-.project__list {
+.grid {
     display: flex;
     flex-wrap: wrap;
   
     gap: var(--indent);
 }
   
-.project__card {
+.grid__item {
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }

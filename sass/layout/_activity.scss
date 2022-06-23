@@ -1,7 +1,7 @@
 .activity__sect {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
         display: block;
         padding-top: 0;
     }
@@ -9,10 +9,7 @@
 
 .activity__list {
     display: flex;
-}
-
-.activity__list .activity__item:not(last-child) {
-    margin-right: 30px;
+    gap: var(--indent);
 }
 
 .activity__thumb {

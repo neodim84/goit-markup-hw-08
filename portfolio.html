@@ -11,7 +11,7 @@
     <!--Шапка страницы-->
 
     <header class="page-header">
-      <div class="container header__cont">
+      <div class="container">
         <!-- Навигация по странице -->
 
         <nav class="page-nav">
@@ -19,39 +19,74 @@
             Web
             <span class="logo-end">Studio</span>
           </a>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="active__link nav__link">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link">Контакты</a>
-            </li>
-          </ul>
+          <button
+            type="button"
+            class="menu__btn"
+            aria-expanded="false"
+            data-menu-button>
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню">
+              <use href="./img/sprite.svg#menu" class="menu__icon"></use>
+              <use
+                href="./img/sprite.svg#close-menu"
+                class="close-menu__icon">
+              </use>
+            </svg>
+          </button>
+          <div class="mobile__cont" data-menu>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="active__link nav__link">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link">Контакты</a>
+              </li>
+            </ul>
 
-        <!--Контакты-->
+            <!--Контакты-->
 
-        <ul class="cont__list">
-          <li class="cont__item">
-            <a href="mailto:info@devstudio.com" class="cont__link">
-              <svg width="16" height="12" class="cont__icon">
-                <use href="./img/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="cont__item">
-            <a href="tel:+380961111111" class="cont__link">
-              <svg width="10" height="16" class="cont__icon">
-                <use href="./img/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
-      </nav>
+            <ul class="cont__list">
+              <li class="cont__item">
+                <a href="mailto:info@devstudio.com" class="cont__link mail__link">
+                  <svg width="16" height="12" class="cont__icon">
+                    <use href="./img/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="cont__item">
+                <a href="tel:+380961111111" class="cont__link tel__link">
+                  <svg width="10" height="16" class="cont__icon">
+                    <use href="./img/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+
+            <!-- Соцсети шапки -->
+
+            <ul class="social-mob__list">
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link">Instagram</a>
+              </li>
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link">Twitter</a>
+              </li>
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link">Facebook</a>
+              </li>
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -78,8 +113,8 @@
               <button type="button" class="filter__btn">Маркетинг</button>
             </li>
           </ul>
-          <ul class="project__list">
-            <li class="project__card">
+          <ul class="project__list grid">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -102,7 +137,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -128,7 +163,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -154,7 +189,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -180,7 +215,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -206,7 +241,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -231,7 +266,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -257,7 +292,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -283,7 +318,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__card">
+            <li class="project__card grid__item">
               <a href="/" class="project__link">
                 <div class="project__thumb">
                   <img
@@ -320,24 +355,28 @@
             Web
             <span class="logo-end-foot">Studio</span>
           </a>
+
+          <!-- Адрес -->
+
           <address>
             <ul class="cont-foot__list">
               <li class="cont-foot__item contact-first">
                 г. Киев, пр-т Леси Украинки, 26
               </li>
               <li class="cont-foot__item">
-                <a href="mailto:info@devstudio.com" class="cont-foot__link"
-                  >info@devstudio.com</a
-                >
+                <a href="mailto:info@devstudio.com" class="cont-foot__link">
+                  info@devstudio.com</a>
               </li>
               <li class="cont-foot__item">
-                <a href="tel:+380961111111" class="cont-foot__link"
-                  >+38 096 111 11 11</a
-                >
+                <a href="tel:+380961111111" class="cont-foot__link">
+                  +38 096 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
+
+        <!-- Соцсети подвала -->
+
         <div class="social-foot__cont">
           <p class="social-foot__text">присоединяйтесь</p>
           <div>
@@ -373,6 +412,9 @@
             </ul>
           </div>
         </div>
+
+        <!-- Подписка -->
+        
         <div class="mailing__cont">
           <p class="social-foot__text">подпишитесь на рассылку</p>
           <form name="mailing-form" class="mailing__form">
@@ -394,5 +436,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -3,11 +3,16 @@
 }
 
 .team__list {
-    display: flex;
-}
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc(100% - var(--indent) / 2);
+        gap: var(--indent);
+    }
 
-.team__list .team__card:not(last-child) {
-    margin-right: 30px;
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
 }
 
 .team__card {
