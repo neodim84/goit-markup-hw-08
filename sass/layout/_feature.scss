@@ -1,9 +1,6 @@
 .feature__list {
     @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        flex-basis: calc(100% - var(--indent) / 2);
-        gap: var(--indent);
+        --items: 2;
     }
 
     @media screen and (min-width: 1200px) {

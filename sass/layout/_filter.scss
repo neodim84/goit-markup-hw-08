@@ -2,10 +2,22 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 15px;
+    }
 }
 
-.filter__list .filter__item:not(last-child) {
-    margin-right: 8px;
+.filter__item + .filter__item {
+    margin-left: 8px;
+}
+
+.filter__item:nth-child(4) {
+    @media screen and (max-width: 767px) {
+        margin-left: 0;
+    }
 }
 
 .filter__btn {

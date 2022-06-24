@@ -4,8 +4,20 @@
 }
 
 .foot__cont {
-    display: flex;
-    align-items: baseline;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
 }
 
 .logo-footer {
@@ -19,14 +31,24 @@
 
 .cont-foot__list {
     font-style: normal;
+
+    @media screen and (max-width: 1199px) {
+        width: 232px;
+        margin: 0 auto 60px auto;
+        text-align: center;
+    }
 }
 
 .contact-first {
     color: var(--primary-color);
 }
 
-.cont-foot__list .cont-foot__item:not(last-child) {
-    margin-bottom: 9px;
+.cont-foot__item + .cont-foot__item {
+    margin-top: 8px;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 9px;   
+    }
 }
 
 .cont-foot__link {
@@ -36,12 +58,22 @@
 
     &:hover,
     &:focus {
-    color: var(--accent-color);
-}
+        color: var(--accent-color);
+    }
 }
 
 .social-foot__cont {
-    margin-left: 70px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+    }
 }
 
 .social-foot__text {
@@ -60,16 +92,20 @@
 }
 
 .mailing__cont {
-    margin-left: auto;
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
 }
 
 .mailing__form {
-    display: flex;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .mailing__input {
     padding: 15px;
-    width: 358px;
+    width: 450px;
     height: 50px;
     background-color: var(--primary-bgc);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -80,6 +116,9 @@
 
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
+
+        font-size: 16px;
+        line-height: 1.25;
     }
 
     &:hover,
@@ -87,6 +126,14 @@
         border: 1px solid var(--accent-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         outline: none;
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
     }
 }
 
@@ -104,7 +151,11 @@
     &:focus {
         background-color: var(--hover-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin: 0 auto;
+    }
 }
 
 .mailing__icon {

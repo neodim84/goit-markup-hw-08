@@ -1,10 +1,6 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-  
-    gap: var(--indent);
-}
-  
-.grid__item {
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    gap: var(--indent);
 }

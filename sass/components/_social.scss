@@ -1,9 +1,13 @@
 .social__list {
     display: flex;
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
 }
 
-.social__list .social__item:not(last-child) {
-    margin-right: 10px;
+.social__item + .social__item {
+    margin-left: 10px;
 }
 
 .social__item {
