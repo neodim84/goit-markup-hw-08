@@ -1,6 +1,6 @@
 .logo-header {
     @media screen and (min-width: 768px) {
-        display: flex;
+        display: block;
         margin-right: 88px;
     }
 
@@ -62,7 +62,7 @@
     @media screen and (max-width: 767px) {
         display: none;
 
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -73,7 +73,8 @@
     }
 
     &.is-open {
-        display: block;
+        display: flex;
+        flex-direction: column;
         z-index: 1;
     }
 
@@ -158,7 +159,7 @@
     @media screen and (max-width: 767px) {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 300px;
+        margin-top: auto;
     }
 
     @media screen and (min-width: 768px) {
