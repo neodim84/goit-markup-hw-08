@@ -208,9 +208,15 @@ body {
   gap: var(--indent);
 }
 
+.logo-header {
+  padding: 16px 0;
+}
+
 @media screen and (min-width: 768px) {
   .logo-header {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-right: 88px;
   }
 }
@@ -235,7 +241,9 @@ body {
 }
 
 .menu__btn {
-  margin: 0 0 0 auto;
+  position: fixed;
+  top: 10px;
+  right: 15px;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -307,6 +315,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -423,9 +434,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
