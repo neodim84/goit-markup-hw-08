@@ -1493,7 +1493,19 @@ body {
   margin-left: 8px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 380px) {
+  .filter__item:nth-child(3) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .filter__item:nth-child(5) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 392px) and (max-width: 767px) {
   .filter__item:nth-child(4) {
     margin-left: 0;
   }
@@ -1548,6 +1560,9 @@ body {
 }
 
 .project__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
